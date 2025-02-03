@@ -15,7 +15,8 @@ pipeline {
 
         stage('Build Java Application') {
             steps {
-                sh 'mvn clean package'
+                def mvnHome = tool name: MAVEN_TOOL, type: 'maven'
+                sh "${mvnHome}/bin/mvn clean package"
             }
         }
 
