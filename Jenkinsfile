@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'aravind189/my-java-app:latest'
+        DOCKER_IMAGE = 'priya290/my-java-app:latest'
         DOCKER_CREDENTIALS_ID = 'docker-hub'
     }
 
     stages {
         stage('Checkout Code') {
             steps {
-                git url: 'https://github.com/aravind189/my-app-java.git', branch: 'main'
+                git url: '', branch: 'main'
             }
         }
 
