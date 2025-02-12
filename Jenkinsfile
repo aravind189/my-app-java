@@ -5,7 +5,14 @@ pipeline {
         DOCKER_IMAGE = 'priya290/my-java'
         DOCKER_CREDENTIALS_ID = 'docker-hub'
     }
-
+    stages {
+        stage('Login') {
+            steps {
+                withDockerRegistry([credentialsId: DOCKER_CREDENTIALS_ID, url: 'https://hub.docker.com/']) {
+                    sh 'echo "Docker login successful"'
+                }
+            }
+        }
     stages {
         stage('Checkout Code') {
             steps {
