@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'priya290/priya'
+        DOCKER_IMAGE = 'priya290/my-java'
         DOCKER_CREDENTIALS_ID = 'docker-hub'
     }
 
