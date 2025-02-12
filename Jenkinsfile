@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Login') {
             steps {
-                withDockerRegistry([credentialsId: DOCKER_CREDENTIALS_ID, url: 'https://hub.docker.com/']) {
+                withDockerRegistry([credentialsId: DOCKER_CREDENTIALS_ID, url: '']) {
                     sh 'echo "Docker login successful"'
                 }
             }
